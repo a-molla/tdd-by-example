@@ -14,4 +14,13 @@ public class Dollar {
     public int getAmount(){
         return this.amount;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Dollar))
+            return false;
+
+        Dollar dollar = (Dollar) obj;
+        return amount == dollar.getAmount();
+    }
 }
