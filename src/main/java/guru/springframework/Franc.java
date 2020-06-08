@@ -1,12 +1,11 @@
 package guru.springframework;
 
 public class Franc extends Money {
-
-    public Franc(int amount) {
-        this.amount = amount;
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
-    public Franc times(int amount) {
-        return new Franc(amount * this.amount);
+    public Money times(int amount) {
+        return Money.franc(amount * this.amount);
     }
 }
