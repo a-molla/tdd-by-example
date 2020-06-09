@@ -26,6 +26,7 @@ public class Money implements Expression {
         return amount;
     }
 
+    @Override
     public Expression times(double multiplier){
         return new Money(amount * multiplier, currency);
     }
